@@ -1,7 +1,7 @@
 const smallCups = document.querySelectorAll('.cup-small'); //nodelistof elements
 const litres = document.getElementById('litres');
 const percentage = document.getElementById('percentage');
-const remained = document.getElementById('remained');
+const remaining = document.getElementById('remaining');
 const goal = document.getElementById('goal');
 
 updateBigCup();
@@ -40,11 +40,11 @@ function updateBigCup() {
     }
 
     if (fullCups === totalCups) {
-        remained.style.visibility = 'hidden';
-        remained.style.height = 0;
+        remaining.style.visibility = 'hidden';
+        remaining.style.height = 0;
         goal.innerText = 'Goal Achieved! Great Job!';
     } else {
-        remained.style.visibility = 'visible';
+        remaining.style.visibility = 'visible';
         litres.innerText = `${2 - (250 * fullCups / 1000)}L`;
         goal.innerText = 'Goal: 2 Litres';
     }
